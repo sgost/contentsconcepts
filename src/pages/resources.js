@@ -50,7 +50,7 @@ export default BlogPage
 
 export const pageQuery = graphql`
   query {
-    blogData: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(blog)\\/.*\\\\.md$/"}}, sort: { fields: [frontmatter___date], order: DESC }) {
+    blogData: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(resources)\\/.*\\\\.md$/"}}, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id

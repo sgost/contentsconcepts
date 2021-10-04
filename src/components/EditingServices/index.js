@@ -1,7 +1,7 @@
 import React, { Fragment } from "react"
 import { graphql } from "gatsby"
 import SEO from "../seo"
-import MenuSection from './menu';
+import MenuSection from "./menu"
 import Customers from "../Customers"
 import Contact from "../Contact"
 import { FAQPreviewSection } from "../FAQ"
@@ -9,19 +9,25 @@ import { FAQPreviewSection } from "../FAQ"
 const EditingServices = ({ data }) => {
   return (
     <Fragment>
-      {
-        data.markdownRemark.frontmatter.seo && <SEO title={data.markdownRemark.frontmatter.seo.title} description={data.markdownRemark.frontmatter.seo.description} keywords={data.markdownRemark.frontmatter.seo.keywords} />
-      }
-      <MenuSection content={data.markdownRemark.frontmatter} description={data.markdownRemark.html} />
+      {data.markdownRemark.frontmatter.seo && (
+        <SEO
+          title={data.markdownRemark.frontmatter.seo.title}
+          description={data.markdownRemark.frontmatter.seo.description}
+          keywords={data.markdownRemark.frontmatter.seo.keywords}
+        />
+      )}
+      <MenuSection
+        content={data.markdownRemark.frontmatter}
+        description={data.markdownRemark.html}
+      />
       <Customers />
       <Contact />
-      {
-        data.markdownRemark.frontmatter.faq &&
+      {data.markdownRemark.frontmatter.faq && (
         <FAQPreviewSection
           title={data.markdownRemark.frontmatter.faq.title}
           questions={data.markdownRemark.frontmatter.faq.questions}
         />
-      }
+      )}
     </Fragment>
   )
 }
@@ -50,6 +56,15 @@ export const query = graphql`
           }
           tagContent
           content
+        }
+        priceDescription {
+          title
+          descriptions {
+            description
+          }
+          lists {
+            list
+          }
         }
         features {
           id

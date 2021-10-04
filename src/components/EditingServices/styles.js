@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { Col } from 'antd';
-import * as palette from '../../styles/variables';
+import styled from "styled-components"
+import { Col } from "antd"
+import * as palette from "../../styles/variables"
 
 export const MenuContainer = styled.div`
   padding: 60px 0px;
@@ -52,7 +52,7 @@ export const MenuContainer = styled.div`
       margin: 0;
     }
   }
-`;
+`
 
 export const HeadingContainer = styled.div`
   display: flex;
@@ -81,7 +81,7 @@ export const HeadingContainer = styled.div`
       line-height: 30px;
     }
   }
-`;
+`
 
 export const TypesContainer = styled.div`
   margin: 8px 0px;
@@ -92,11 +92,11 @@ export const TypesContainer = styled.div`
     color: ${palette.PRIMARY_TXT_COLOR};
     margin-bottom: 5px;
   }
-`;
+`
 
 export const FeaturesListContainer = styled.ul`
   margin: 35px 0px;
-`;
+`
 
 export const FeatureSecList = styled.li`
   display: flex;
@@ -114,7 +114,7 @@ export const FeatureSecList = styled.li`
       text-decoration: underline;
     }
   }
-`;
+`
 
 export const RefundSection = styled.div`
   p {
@@ -126,7 +126,7 @@ export const RefundSection = styled.div`
     margin-top: 5px;
     display: block;
   }
-`;
+`
 
 export const ButtonContainer = styled.div`
   display: flex;
@@ -159,7 +159,7 @@ export const ButtonContainer = styled.div`
       margin: 10px 0px;
     }
   }
-`;
+`
 
 // Levels Section
 export const LevelsListing = styled.div`
@@ -248,7 +248,7 @@ export const LevelsListing = styled.div`
       }
     }
   }
-`;
+`
 
 export const LevelsSection = styled.div`
   background: ${palette.PRIMARY_SECTION_BACKGROUND};
@@ -262,7 +262,7 @@ export const LevelsSection = styled.div`
   @media (max-width: 576px) {
     padding: 30px;
   }
-`;
+`
 
 export const SectionHeading = styled.div`
   padding: 20px 0px;
@@ -271,7 +271,7 @@ export const SectionHeading = styled.div`
     font-size: 18px;
     font-weight: normal;
   }
-`;
+`
 
 //samples section
 export const SamplesSection = styled.div`
@@ -286,7 +286,7 @@ export const SamplesSection = styled.div`
   @media (max-width: 576px) {
     padding: 30px;
   }
-`;
+`
 
 export const TabsContainer = styled.div`
   max-width: 1100px;
@@ -325,7 +325,7 @@ export const TabsContainer = styled.div`
   .ant-tabs-ink-bar {
     background: ${palette.BUTTON_PRIMARY};
   }
-`;
+`
 
 export const TabContent = styled.div`
   padding: 30px;
@@ -350,7 +350,7 @@ export const TabContent = styled.div`
       line-height: 35px;
     }
   }
-`;
+`
 
 //highlights section
 export const HighlightsSection = styled.div`
@@ -386,7 +386,7 @@ export const HighlightsSection = styled.div`
       }
     }
   }
-`;
+`
 
 export const HighlightCard = styled.div`
   background: ${palette.WHITE_COLOR};
@@ -410,7 +410,7 @@ export const HighlightCard = styled.div`
   @media only screen and (min-width: 320px) and (max-width: 768px) {
     padding: 25px;
   }
-`;
+`
 
 //quality section
 export const QualitySection = styled.div`
@@ -458,17 +458,18 @@ export const QualitySection = styled.div`
       }
       @media (max-width: 576px) {
         padding: 20px 0px;
-        h2, p {
+        h2,
+        p {
           text-align: center;
         }
       }
     }
   }
-`;
+`
 
 //service card
 export const ServiceCard = styled.div`
-  box-shadow: 0 0 15px 0 rgba(0,0,0,.15);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
   background: rgb(255, 255, 255);
   border-radius: 8px;
   padding: 32px 0px;
@@ -477,7 +478,7 @@ export const ServiceCard = styled.div`
     color: rgba(52, 152, 219, 0.7);
     padding: 0px 12px;
   }
-`;
+`
 
 export const PriceSection = styled.div`
   margin: 16px 0px 25px;
@@ -499,7 +500,7 @@ export const PriceSection = styled.div`
       font-size: 22px;
     }
   }
-`;
+`
 
 export const TagContent = styled.div`
   padding: 8px;
@@ -511,7 +512,7 @@ export const TagContent = styled.div`
     text-align: center;
     letter-spacing: 1px;
   }
-`;
+`
 
 export const DescSection = styled.div`
   margin-bottom: 30px;
@@ -519,7 +520,7 @@ export const DescSection = styled.div`
   p {
     font-size: 14px;
   }
-`;
+`
 
 export const ButtonSection = styled.div`
   padding: 15px 45px 0px;
@@ -529,13 +530,53 @@ export const ButtonSection = styled.div`
       width: auto;
     }
   }
-`;
+`
 
 export const FooterCol = styled(Col)`
   .ant-btn {
     background-color: ${props => props.theme} !important;
-    &:hover, &:focus, &:active {
+    &:hover,
+    &:focus,
+    &:active {
       background-color: ${props => props.theme} !important;
     }
   }
-`;
+`
+
+//Level Description
+export const LevelDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 5vw;
+  width: fit-content;
+  margin: auto;
+  h1 {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 10px;
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+  h3 {
+    margin-bottom: 24px;
+  }
+  .gatsby-resp-image-wrapper {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  p {
+    margin-bottom: 24px;
+    font-size: 16px;
+  }
+  ul {
+    list-style: inside;
+    margin-bottom: 10px;
+  }
+  li {
+    font-weight: normal;
+    font-size: 16px;
+    color: ${palette.PRIMARY_TXT_COLOR};
+    margin: 15px 0px;
+  }
+`

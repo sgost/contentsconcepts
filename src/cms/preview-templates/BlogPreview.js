@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import moment  from 'moment';
 
-import { BlogPost } from "../../components/Blog";
+import { BlogPost } from "../../components/Resources";
 
 const BlogPreview = ({ entry, widgetFor, getAsset }) => {
 

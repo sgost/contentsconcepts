@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import {
-    PriceEstimate_main,
-    PriceEstimate_container,
-    PriceEstimate_container_b1,
-    PriceEstimate_container_b2
+    PriceEstimatemain,
+    PriceEstimatecontainer,
+    PriceEstimatecontainerb1,
+    PriceEstimatecontainerb2
 } from './styles';
 import GetQuote from "../GetQuote/index";
 import { Modal } from 'antd';
@@ -58,10 +58,10 @@ const PriceEstimate = props => {
     }
     return (
         <>
-            <PriceEstimate_main>
+            <PriceEstimatemain>
             <div id="PrizeEstimation">
-                <PriceEstimate_container>
-                    <PriceEstimate_container_b1>
+                <PriceEstimatecontainer>
+                    <PriceEstimatecontainerb1>
                         <div id="slide_label">
                             <h1>Calculate your editing fee</h1>
                         </div>
@@ -97,11 +97,11 @@ const PriceEstimate = props => {
                                 <label htmlFor="firstName"><Link to="/pricing/#pricing">For details on each service, check the Pricing Table below</Link></label>
                             </div>
                         </div>
-                    </PriceEstimate_container_b1>
+                    </PriceEstimatecontainerb1>
                     {array && array.map((paymap, i) => (
                         <>
                             {toggleState === i && (
-                                <PriceEstimate_container_b2 key={i}>
+                                <PriceEstimatecontainerb2 key={i}>
                                     <div id="p_b_top_main">
                                         <button onClick={() => setcurrency(4)} className={currency === 4 ? "currency1 currency2" : "currency1"}>₹ INR </button>
                                         <button onClick={() => setcurrency(5)} className={currency === 5 ? "currency1 currency2" : "currency1"}>$ USD</button>
@@ -140,13 +140,13 @@ const PriceEstimate = props => {
                                             <button>Upload Document</button>
                                         </div>
                                     }
-                                </PriceEstimate_container_b2>
+                                </PriceEstimatecontainerb2>
                             )}
                         </>
                     ))}
-                </PriceEstimate_container>
+                </PriceEstimatecontainer>
                 </div>
-            </PriceEstimate_main>
+            </PriceEstimatemain>
             <Modal
                 title="Submit Document"
                 centered
