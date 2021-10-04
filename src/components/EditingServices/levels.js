@@ -12,7 +12,6 @@ import {
 
 const EditingLevels = ({ content, paraDescription }) => {
   // const content = props.content;
-  console.log(paraDescription)
 
   return (
     <Fragment>
@@ -101,21 +100,22 @@ const EditingLevels = ({ content, paraDescription }) => {
             />
           </LevelsListing>
           <LevelDescription>
-            {paraDescription.map(paraDescriptions => (
-              <Fragment key={paraDescriptions.title}>
-                <h1>{paraDescriptions.title}</h1>
-                {paraDescriptions.descriptions.map(descriptionss => (
-                  <Fragment key={descriptionss.description}>
-                    <p>{descriptionss.description}</p>
-                  </Fragment>
-                ))}
-                <ul>
-                  {paraDescriptions.lists.map(listss => (
-                    <li key={listss.list}>{listss.list}</li>
+            {paraDescription &&
+              paraDescription.map(paraDescriptions => (
+                <Fragment key={paraDescriptions.title}>
+                  <h1>{paraDescriptions.title}</h1>
+                  {paraDescriptions.descriptions.map(descriptionss => (
+                    <Fragment key={descriptionss.description}>
+                      <p>{descriptionss.description}</p>
+                    </Fragment>
                   ))}
-                </ul>
-              </Fragment>
-            ))}
+                  <ul>
+                    {paraDescriptions.lists.map(listss => (
+                      <li key={listss.list}>{listss.list}</li>
+                    ))}
+                  </ul>
+                </Fragment>
+              ))}
           </LevelDescription>
         </LevelsSection>
       )}
