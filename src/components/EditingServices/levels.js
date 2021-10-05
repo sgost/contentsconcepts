@@ -100,8 +100,7 @@ const EditingLevels = ({ content, paraDescription }) => {
             />
           </LevelsListing>
           <LevelDescription>
-            {paraDescription &&
-              paraDescription.map(paraDescriptions => (
+            {paraDescription.map(paraDescriptions => (
                 <Fragment key={paraDescriptions.title}>
                   <h1>{paraDescriptions.title}</h1>
                   {paraDescriptions.descriptions.map(descriptionss => (
