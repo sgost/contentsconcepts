@@ -68,7 +68,7 @@ const MenuSection = props => {
           </Sider>
         </Layout>
       </MenuContainer>
-      <EditingLevels content={data.editingLevels} paraDescription={data.priceDescription} />
+      <EditingLevels content={data.editingLevels} />
       <EditingSamples content={data.editingSample} />
       <Highlights content={data.editingHighlights} />
       {

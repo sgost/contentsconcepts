@@ -10,7 +10,7 @@ import {
   FooterCol,
 } from "./styles"
 
-const EditingLevels = ({ content, paraDescription }) => {
+const EditingLevels = ({ content }) => {
   // const content = props.content;
 
   return (
@@ -100,21 +100,24 @@ const EditingLevels = ({ content, paraDescription }) => {
             />
           </LevelsListing>
           <LevelDescription>
-            {paraDescription.map(paraDescriptions => (
-                <Fragment key={paraDescriptions.title}>
-                  <h1>{paraDescriptions.title}</h1>
-                  {paraDescriptions.descriptions.map(descriptionss => (
-                    <Fragment key={descriptionss.description}>
-                      <p>{descriptionss.description}</p>
-                    </Fragment>
-                  ))}
-                  <ul>
-                    {paraDescriptions.lists.map(listss => (
-                      <li key={listss.list}>{listss.list}</li>
-                    ))}
-                  </ul>
-                </Fragment>
-              ))}
+            <Fragment>
+              {content.priceDescription &&
+                content.priceDescription.map(priceDescription => (
+                  <Fragment key={priceDescription.title}>
+                    <h1>{priceDescription.title}</h1>
+                    {priceDescription.descriptions &&
+                      priceDescription.descriptions.map(descriptions => (
+                        <p key={descriptions.description}>
+                          {descriptions.description}
+                        </p>
+                      ))}
+                    {priceDescription.lists &&
+                      priceDescription.lists.map(lists => (
+                        <p key={lists.list}>{lists.list}</p>
+                      ))}
+                  </Fragment>
+                ))}
+            </Fragment>
           </LevelDescription>
         </LevelsSection>
       )}

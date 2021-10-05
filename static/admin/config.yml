@@ -1,550 +1,552 @@
-backend:
-  name: git-gateway
+ backend:
+   name: github
+   repo: fidisys/contentconcepts-data
 
-publish_mode: editorial_workflow
+ publish_mode: editorial_workflow
 
-media_folder: "assets"
-public_folder: "/"
+ media_folder: "assets"
+ public_folder: "/"
 
-collections:
-  - label: Payment
-    name: payment
-    files:
-      - label: Payment
-        name: payment
-        file: "payment/payment.md"
-        public_folder: "../assets/"
-        fields:
-          - {
-              label: Title,
-              name: title,
-              widget: string,
-              default: "Payment Options",
-            }
-          - { label: Description, name: description }
-          - { label: QR title, name: description1 }
-          - { label: QR Description, name: description2 }
-          - { label: QR para1, name: description3 }
-          - {
-              label: Mail Id,
-              name: description4,
-              default: contentconcepts@icici,
-            }
-          - { label: Payment Option Title, name: description5 }
-          - { label: Account Number Title, name: description6 }
-          - { label: Account Number, name: description7, default: 034201526268 }
-          - { label: Branch Title, name: description8, default: Branch }
-          - {
-              label: Branch Name,
-              name: description9,
-              default: RS Puram Coimbatore,
-            }
-          - { label: Bank Title, name: description10, default: Bank }
-          - { label: Bank Name, name: description11, default: ICICI Bank }
-          - { label: Name Title, name: description12, default: Name }
-          - { label: Name, name: description13, default: DHANALAKSHMI N }
-          - { label: IFSC Title, name: description14, default: IFSC }
-          - { label: IFSC, name: description15, default: ICIC0000342 }
-          - { label: QR code, name: qrimage, widget: image }
-  - label: Service Links
-    name: service Links
-    files:
-      - label: Service Links
-        name: service Links
-        file: "home/footer.md"
-        fields:
-          - {
-              label: Services Links,
-              name: sitemapList,
-              widget: list,
-              fields:
-                [
-                  { label: Title, name: title, widget: string },
-                  {
-                    label: Links Editor,
-                    name: sitemap,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Menu Label, name: title },
-                        { label: Link, name: link },
-                      ],
-                  },
-                ],
-            }
-  - label: Home
-    name: home
-    files:
-      - label: Banner
-        name: homeBanner
-        file: "home/banner.md"
-        fields:
-          - { label: Title, name: title }
-          - { label: Typed Words, name: typedWords, widget: list }
-          - label: Services
-            name: services
-            widget: list
-            fields:
-              - { label: id, name: id, widget: number }
-              - { label: Title, name: title }
-              - { label: Link, name: link }
-      - label: Features
-        name: features
-        file: "home/features.md"
-        public_folder: "../assets/"
-        fields:
-          - { label: Title, name: title }
-          - label: Features
-            name: features
-            widget: list
-            fields:
-              - { label: id, name: id, widget: number }
-              - { label: Title, name: title }
-              - { label: Image, name: image, widget: image }
-      - label: Clients
-        name: clients
-        file: "home/clients.md"
-        public_folder: "../assets/"
-        fields:
-          - { label: Title, name: title }
-          - { label: Description, name: description }
-          - label: Clients
-            name: clients
-            widget: list
-            fields:
-              - { label: id, name: id, widget: number }
-              - { label: Title, name: title }
-              - { label: Image, name: image, widget: image }
-      - label: Services
-        name: homeServices
-        file: "home/ourServices.md"
-        public_folder: "../assets/"
-        fields:
-          - { label: Title, name: title }
-          - label: Services
-            name: services
-            widget: list
-            fields:
-              - { label: id, name: id, widget: number }
-              - { label: Title, name: title }
-              - { label: Description, name: description }
-              - { label: Image, name: image, widget: image }
-              - { label: Link, name: link }
-      - label: Specialization
-        name: specialization
-        file: "home/specialization.md"
-        public_folder: "../assets/"
-        fields:
-          - { label: Title, name: title }
-          - { label: Description, name: description }
-          - { label: Badge, name: badge, widget: image }
-          - label: Specialities
-            name: specialities
-            widget: list
-            fields:
-              - { label: id, name: id, widget: number }
-              - { label: Title, name: title }
-              - { label: Description, name: description }
-              - { label: Theme Color, name: themeColor }
-      - label: Testimonial
-        name: testimonial
-        file: "home/testimonial.md"
-        fields:
-          - { label: Title, name: title }
-          - label: Testimonials
-            name: testimonials
-            widget: list
-            fields:
-              - { label: id, name: id, widget: number }
-              - { label: Title, name: title }
-              - { label: Count, name: count, widget: number }
-              - { label: Theme Color, name: themeColor }
-      - label: Process
-        name: process
-        file: "home/process.md"
-        fields:
-          - { label: Title, name: title }
-          - label: Process
-            name: process
-            widget: list
-            fields:
-              - { label: id, name: id, widget: number }
-              - { label: Order, name: order }
-              - { label: Title, name: title }
-              - { label: Description, name: description }
-              - { label: Theme Color, name: themeColor }
-      - label: SEO
-        name: seoHome
-        file: "home/seo.md"
-        fields:
-          - { label: Title, name: title }
-          - { label: Description, name: description }
-          - { label: Keywords, name: keywords, widget: list }
-      - label: Customers
-        name: customers
-        file: "home/customers.md"
-        public_folder: "../assets/"
-        fields:
-          - { label: Title, name: title }
-          - label: Customers
-            name: customers
-            widget: list
-            fields:
-              - { label: id, name: id, widget: number }
-              - { label: Name, name: name }
-              - { label: Excerpt, name: commentExcerpt }
-              - { label: Comment, name: comment }
-              - { label: Role, name: role }
-              - { label: Company, name: company }
-              - { label: Image, name: image, widget: image }
-      - label: Contact
-        name: contact
-        file: "home/contact.md"
-        fields:
-          - { label: Title, name: title }
-          - { label: Call, name: call }
-          - { label: Email, name: email }
-          - label: Categories
-            name: categories
-            widget: list
-            fields:
-              - { label: id, name: id, widget: number }
-              - { label: Title, name: title }
-              - { label: Value, name: value }
-      - label: Footer
-        name: footer
-        file: "home/footer.md"
-        fields:
-          - { label: Title, name: title }
-          - label: Sitemap List
-            name: sitemapList
-            widget: list
-            fields:
-              - { label: id, name: id, widget: number }
-              - { label: Title, name: title }
-              - { label: Link, name: link, required: false }
-              - label: Sitemap
-                name: sitemap
-                widget: list
-                fields:
-                  - { label: id, name: id, widget: number }
-                  - { label: Title, name: title }
-                  - { label: Link, name: link }
-      - label: Offers
-        name: offers
-        file: "home/offers.md"
-        fields:
-          - { label: Title, name: title }
-          - { label: offer, name: offer }
-          - label: OfferLink
-            name: offerLink
-            widget: object
-            fields:
-              - { label: Title, name: title }
-              - { label: Link, name: link }
-  - label: About
-    name: about
-    files:
-      - label: Banner
-        name: banner
-        file: "about/banner.md"
-        fields:
-          - { label: Title, name: title }
-          - { name: body, label: Body, widget: markdown }
-      - label: SEO
-        name: seoAbout
-        file: "about/seo.md"
-        fields:
-          - { label: Title, name: title }
-          - { label: Description, name: description }
-          - { label: Keywords, name: keywords, widget: list }
-      - label: Team
-        name: team
-        file: "about/team.md"
-        public_folder: "../assets/"
-        fields:
-          - { label: Title, name: title }
-          - label: Team Members
-            name: teamMembers
-            widget: list
-            fields:
-              - { label: id, name: id, widget: number }
-              - { label: Name, name: name }
-              - { label: Role, name: role }
-              - { label: Description, name: description }
-              - { label: Image, name: image, widget: image }
-              - { label: Theme Color, name: themeColor }
-  - name: services
-    label: Services
-    folder: services
-    create: true
-    media_folder: ""
-    public_folder: ""
-    nested:
-      depth: 100
-      summary: "{{title}}"
-    fields:
-      - { name: title, label: Title }
-      - { name: highlight, label: Highlight }
-      - { name: body, label: Description, widget: markdown }
-      - { name: message, label: Message }
-      - label: Price List Description
-        name: priceDescription
-        widget: list
-        fields:
-          - { label: Title, name: title }
-          - label: Description
-            name: descriptions
-            widget: list
-            fields:
-              - { label: Description, name: description }
-          - label: Bullet Points
-            name: lists
-            widget: list
-            fields:
-              - { label: Points, name: list }
-      - label: Features
-        name: features
-        widget: list
-        fields:
-          - { label: Title, name: title }
-          - { label: id, name: id, widget: number }
-          - { label: Link, name: link, required: false }
-      - label: Price Card
-        name: priceCard
-        widget: object
-        fields:
-          - label: Pricing
-            name: pricing
-            widget: object
-            fields:
-              - { label: Title, name: title }
-              - label: Price
-                name: price
-                widget: object
-                fields:
-                  - { label: INR, name: inr, required: false }
-                  - { label: USD, name: usd, required: false }
-          - { label: Tag Content, name: tagContent }
-          - { label: Content, name: content }
-      - label: Editing Levels
-        name: editingLevels
-        widget: object
-        fields:
-          - { label: Title, name: title, required: false }
-          - { label: SubHeading, name: subHeading, required: false }
-          - label: Level Types
-            name: levelTypes
-            required: false
-            widget: list
-            fields:
-              - { label: Title, name: title }
-              - { label: id, name: id, widget: number }
-              - { label: Theme Color, name: themeColor }
-          - label: Levels
-            name: levels
-            required: false
-            widget: list
-            fields:
-              - { label: Title, name: title }
-              - { label: id, name: id, widget: number }
-              - { label: Copy, name: copy }
-              - { label: Substantive, name: substantive }
-              - { label: Developmental, name: developmental }
-      - label: Editing Sample
-        name: editingSample
-        widget: object
-        fields:
-          - { label: Title, name: title, required: false }
-          - label: Samples
-            name: samples
-            required: false
-            widget: list
-            fields:
-              - { label: Title, name: title }
-              - { label: id, name: id, widget: number }
-              - { label: Description, name: description }
-              - { label: Image, name: image, widget: image }
-      - label: Editing Highlights
-        name: editingHighlights
-        widget: object
-        fields:
-          - { label: Title, name: title, required: false }
-          - label: Highlights
-            name: highlights
-            required: false
-            widget: list
-            fields:
-              - { label: Title, name: title }
-              - { label: id, name: id, widget: number }
-              - { label: Description, name: description }
-              - { label: Image, name: image, widget: image }
-      - label: Service Process
-        name: serviceProcess
-        widget: object
-        fields:
-          - { label: Title, name: title, required: false }
-          - label: Steps
-            name: steps
-            required: false
-            widget: list
-            fields:
-              - { label: Title, name: title }
-              - { label: id, name: id, widget: number }
-              - { label: Order, name: order }
-              - { label: Description, name: description }
-              - { label: ThemeColor, name: themeColor }
-      - label: FAQ
-        name: faq
-        widget: object
-        fields:
-          - { label: Title, name: title, required: false }
-          - label: Questions
-            name: questions
-            required: false
-            widget: list
-            fields:
-              - { label: id, name: id, widget: number }
-              - { label: Question, name: question }
-              - { label: Answer, name: answer }
-      - { label: Key, name: key }
-      - { label: Parent Type, name: parentType }
-      - label: SEO
-        name: seo
-        widget: object
-        fields:
-          - { name: title, label: Title }
-          - { name: description, label: Description }
-          - { name: keywords, label: Keywords, widget: list }
-    meta: { path: { widget: string, label: "Path", index_file: "index" } }
-  - name: blog
-    label: Resources
-    label_singular: "Blog"
-    folder: resources
-    media_folder: ""
-    public_folder: ""
-    slug: "{{slug}}"
-    create: true
-    nested:
-      depth: 100
-      summary: "{{title}}"
-    fields:
-      - label: Author Image
-        name: author_image
-        widget: image
-        media_folder: "/resources/"
-        default: "cc-logo-new.png"
-      - { name: author, label: Author, default: "ContentConcepts" }
-      - { name: bio, label: Bio }
-      - { name: title, label: Title }
-      - { name: date, label: Date, widget: date, default: "" }
-      - { name: previewImage, label: Preview Image, widget: image }
-      - { name: excerpt, label: Excerpt }
-      - { name: tags, label: Tags, widget: list }
-      - { name: body, label: Body, widget: markdown }
-      - label: SEO
-        name: seo
-        widget: object
-        fields:
-          - { name: title, label: Title }
-          - { name: description, label: Description }
-          - { name: keywords, label: Keywords, widget: list }
-  - name: pricing
-    label: Pricing
-    files:
-      - label: Pricing
-        name: pricing
-        file: "pricing/index.md"
-        fields:
-          - { name: title, label: Title }
-          - { name: heading, label: Heading }
-          - { name: subHeading, label: SubHeading }
-          - label: Types
-            name: types
-            widget: list
-            fields:
-              - { label: id, name: id, widget: number }
-              - { label: Title, name: title }
-              - label: Pricing
-                name: pricing
-                widget: list
-                fields:
-                  - { label: id, name: id, widget: number }
-                  - { label: Title, name: title }
-                  - {
-                      label: Editing Services,
-                      name: editingServices,
-                      widget: list,
-                    }
-                  - label: Price
-                    name: price
-                    widget: object
-                    fields:
-                      - { label: inr, name: inr }
-                      - { label: usd, name: usd }
-                  - { label: Theme Color, name: themeColor }
-      - label: SEO
-        name: seoAbout
-        file: "pricing/seo.md"
-        fields:
-          - { label: Title, name: title }
-          - { label: Description, name: description }
-          - { label: Keywords, name: keywords, widget: list }
-  - label: FAQ
-    name: faq
-    files:
-      - label: FAQ
-        name: faq
-        file: "faq.md"
-        fields:
-          - { label: Title, name: title }
-          - label: Questions
-            name: questions
-            widget: list
-            fields:
-              - { label: id, name: id, widget: number }
-              - { label: Question, name: question }
-              - { label: Answer, name: answer }
-  - label: Quality Assurance
-    name: qualityAssurance
-    files:
-      - label: Quality Assurance
-        name: qualityAssurance
-        file: "qualityAssurance.md"
-        fields:
-          - { label: Title, name: title }
-          - { name: body, label: Body, widget: markdown }
-  - label: Quote Category
-    name: quoteCategory
-    files:
-      - label: Quote Category
-        name: quoteCategory
-        file: "quoteCategory.md"
-        fields:
-          - { label: Title, name: title }
-          - label: Categories
-            name: categories
-            widget: list
-            fields:
-              - { label: Label, name: label }
-              - { label: Value, name: value }
-  - label: SEO Contact Page
-    name: seoContact
-    files:
-      - label: SEO Contact
-        name: seoContact
-        file: "seoContact.md"
-        fields:
-          - { label: Title, name: title }
-          - { label: Description, name: description }
-          - { label: Keywords, name: keywords, widget: list }
-  - label: SEO Blog Page
-    name: seoBlog
-    files:
-      - label: SEO Blog
-        name: seoBlog
-        file: "seoBlog.md"
-        fields:
-          - { label: Title, name: title }
-          - { label: Description, name: description }
-          - { label: Keywords, name: keywords, widget: list }
+ collections:
+   - label: Payment
+     name: payment
+     files:
+       - label: Payment
+         name: payment
+         file: "payment/payment.md"
+         public_folder: "../assets/"
+         fields:
+           - {
+               label: Title,
+               name: title,
+               widget: string,
+               default: "Payment Options",
+             }
+           - { label: Description, name: description }
+           - { label: QR title, name: description1 }
+           - { label: QR Description, name: description2 }
+           - { label: QR para1, name: description3 }
+           - {
+               label: Mail Id,
+               name: description4,
+               default: contentconcepts@icici,
+             }
+           - { label: Payment Option Title, name: description5 }
+           - { label: Account Number Title, name: description6 }
+           - { label: Account Number, name: description7, default: 034201526268 }
+           - { label: Branch Title, name: description8, default: Branch }
+           - {
+               label: Branch Name,
+               name: description9,
+               default: RS Puram Coimbatore,
+             }
+           - { label: Bank Title, name: description10, default: Bank }
+           - { label: Bank Name, name: description11, default: ICICI Bank }
+           - { label: Name Title, name: description12, default: Name }
+           - { label: Name, name: description13, default: DHANALAKSHMI N }
+           - { label: IFSC Title, name: description14, default: IFSC }
+           - { label: IFSC, name: description15, default: ICIC0000342 }
+           - { label: QR code, name: qrimage, widget: image }
+   - label: Service Links
+     name: service Links
+     files:
+       - label: Service Links
+         name: service Links
+         file: "home/footer.md"
+         fields:
+           - {
+               label: Services Links,
+               name: sitemapList,
+               widget: list,
+               fields:
+                 [
+                   { label: Title, name: title, widget: string },
+                   {
+                     label: Links Editor,
+                     name: sitemap,
+                     widget: list,
+                     fields:
+                       [
+                         { label: Menu Label, name: title },
+                         { label: Link, name: link },
+                       ],
+                   },
+                 ],
+             }
+   - label: Home
+     name: home
+     files:
+       - label: Banner
+         name: homeBanner
+         file: "home/banner.md"
+         fields:
+           - { label: Title, name: title }
+           - { label: Typed Words, name: typedWords, widget: list }
+           - label: Services
+             name: services
+             widget: list
+             fields:
+               - { label: id, name: id, widget: number }
+               - { label: Title, name: title }
+               - { label: Link, name: link }
+       - label: Features
+         name: features
+         file: "home/features.md"
+         public_folder: "../assets/"
+         fields:
+           - { label: Title, name: title }
+           - label: Features
+             name: features
+             widget: list
+             fields:
+               - { label: id, name: id, widget: number }
+               - { label: Title, name: title }
+               - { label: Image, name: image, widget: image }
+       - label: Clients
+         name: clients
+         file: "home/clients.md"
+         public_folder: "../assets/"
+         fields:
+           - { label: Title, name: title }
+           - { label: Description, name: description }
+           - label: Clients
+             name: clients
+             widget: list
+             fields:
+               - { label: id, name: id, widget: number }
+               - { label: Title, name: title }
+               - { label: Image, name: image, widget: image }
+       - label: Services
+         name: homeServices
+         file: "home/ourServices.md"
+         public_folder: "../assets/"
+         fields:
+           - { label: Title, name: title }
+           - label: Services
+             name: services
+             widget: list
+             fields:
+               - { label: id, name: id, widget: number }
+               - { label: Title, name: title }
+               - { label: Description, name: description }
+               - { label: Image, name: image, widget: image }
+               - { label: Link, name: link }
+       - label: Specialization
+         name: specialization
+         file: "home/specialization.md"
+         public_folder: "../assets/"
+         fields:
+           - { label: Title, name: title }
+           - { label: Description, name: description }
+           - { label: Badge, name: badge, widget: image }
+           - label: Specialities
+             name: specialities
+             widget: list
+             fields:
+               - { label: id, name: id, widget: number }
+               - { label: Title, name: title }
+               - { label: Description, name: description }
+               - { label: Theme Color, name: themeColor }
+       - label: Testimonial
+         name: testimonial
+         file: "home/testimonial.md"
+         fields:
+           - { label: Title, name: title }
+           - label: Testimonials
+             name: testimonials
+             widget: list
+             fields:
+               - { label: id, name: id, widget: number }
+               - { label: Title, name: title }
+               - { label: Count, name: count, widget: number }
+               - { label: Theme Color, name: themeColor }
+       - label: Process
+         name: process
+         file: "home/process.md"
+         fields:
+           - { label: Title, name: title }
+           - label: Process
+             name: process
+             widget: list
+             fields:
+               - { label: id, name: id, widget: number }
+               - { label: Order, name: order }
+               - { label: Title, name: title }
+               - { label: Description, name: description }
+               - { label: Theme Color, name: themeColor }
+       - label: SEO
+         name: seoHome
+         file: "home/seo.md"
+         fields:
+           - { label: Title, name: title }
+           - { label: Description, name: description }
+           - { label: Keywords, name: keywords, widget: list }
+       - label: Customers
+         name: customers
+         file: "home/customers.md"
+         public_folder: "../assets/"
+         fields:
+           - { label: Title, name: title }
+           - label: Customers
+             name: customers
+             widget: list
+             fields:
+               - { label: id, name: id, widget: number }
+               - { label: Name, name: name }
+               - { label: Excerpt, name: commentExcerpt }
+               - { label: Comment, name: comment }
+               - { label: Role, name: role }
+               - { label: Company, name: company }
+               - { label: Image, name: image, widget: image }
+       - label: Contact
+         name: contact
+         file: "home/contact.md"
+         fields:
+           - { label: Title, name: title }
+           - { label: Call, name: call }
+           - { label: Email, name: email }
+           - label: Categories
+             name: categories
+             widget: list
+             fields:
+               - { label: id, name: id, widget: number }
+               - { label: Title, name: title }
+               - { label: Value, name: value }
+       - label: Footer
+         name: footer
+         file: "home/footer.md"
+         fields:
+           - { label: Title, name: title }
+           - label: Sitemap List
+             name: sitemapList
+             widget: list
+             fields:
+               - { label: id, name: id, widget: number }
+               - { label: Title, name: title }
+               - { label: Link, name: link, required: false }
+               - label: Sitemap
+                 name: sitemap
+                 widget: list
+                 fields:
+                   - { label: id, name: id, widget: number }
+                   - { label: Title, name: title }
+                   - { label: Link, name: link }
+       - label: Offers
+         name: offers
+         file: "home/offers.md"
+         fields:
+           - { label: Title, name: title }
+           - { label: offer, name: offer }
+           - label: OfferLink
+             name: offerLink
+             widget: object
+             fields:
+               - { label: Title, name: title }
+               - { label: Link, name: link }
+   - label: About
+     name: about
+     files:
+       - label: Banner
+         name: banner
+         file: "about/banner.md"
+         fields:
+           - { label: Title, name: title }
+           - { name: body, label: Body, widget: markdown }
+       - label: SEO
+         name: seoAbout
+         file: "about/seo.md"
+         fields:
+           - { label: Title, name: title }
+           - { label: Description, name: description }
+           - { label: Keywords, name: keywords, widget: list }
+       - label: Team
+         name: team
+         file: "about/team.md"
+         public_folder: "../assets/"
+         fields:
+           - { label: Title, name: title }
+           - label: Team Members
+             name: teamMembers
+             widget: list
+             fields:
+               - { label: id, name: id, widget: number }
+               - { label: Name, name: name }
+               - { label: Role, name: role }
+               - { label: Description, name: description }
+               - { label: Image, name: image, widget: image }
+               - { label: Theme Color, name: themeColor }
+   - name: services
+     label: Services
+     folder: services
+     create: true
+     media_folder: ""
+     public_folder: ""
+     nested:
+       depth: 100
+       summary: "{{title}}"
+     fields:
+       - { name: title, label: Title }
+       - { name: highlight, label: Highlight }
+       - { name: body, label: Description, widget: markdown }
+       - { name: message, label: Message }
+       - label: Features
+         name: features
+         widget: list
+         fields:
+           - { label: Title, name: title }
+           - { label: id, name: id, widget: number }
+           - { label: Link, name: link, required: false }
+       - label: Price Card
+         name: priceCard
+         widget: object
+         fields:
+           - label: Pricing
+             name: pricing
+             widget: object
+             fields:
+               - { label: Title, name: title }
+               - label: Price
+                 name: price
+                 widget: object
+                 fields:
+                   - { label: INR, name: inr, required: false }
+                   - { label: USD, name: usd, required: false }
+           - { label: Tag Content, name: tagContent }
+           - { label: Content, name: content }
+       - label: Editing Levels
+         name: editingLevels
+         widget: object
+         fields:
+           - { label: Title, name: title, required: false }
+           - { label: SubHeading, name: subHeading, required: false }
+           - label: Level Types
+             name: levelTypes
+             required: false
+             widget: list
+             fields:
+               - { label: Title, name: title }
+               - { label: id, name: id, widget: number }
+               - { label: Theme Color, name: themeColor }
+           - label: Price List Description
+             name: priceDescription
+             widget: list
+             fields:
+               - { label: Title, name: title }
+               - label: Description
+                 name: descriptions
+                 widget: list
+                 fields:
+                   - { label: Description, name: description }
+               - label: Bullet Points
+                 name: lists
+                 widget: list
+                 fields:
+                   - { label: Points, name: list }
+           - label: Levels
+             name: levels
+             required: false
+             widget: list
+             fields:
+               - { label: Title, name: title }
+               - { label: id, name: id, widget: number }
+               - { label: Copy, name: copy }
+               - { label: Substantive, name: substantive }
+               - { label: Developmental, name: developmental }
+       - label: Editing Sample
+         name: editingSample
+         widget: object
+         fields:
+           - { label: Title, name: title, required: false }
+           - label: Samples
+             name: samples
+             required: false
+             widget: list
+             fields:
+               - { label: Title, name: title }
+               - { label: id, name: id, widget: number }
+               - { label: Description, name: description }
+               - { label: Image, name: image, widget: image }
+       - label: Editing Highlights
+         name: editingHighlights
+         widget: object
+         fields:
+           - { label: Title, name: title, required: false }
+           - label: Highlights
+             name: highlights
+             required: false
+             widget: list
+             fields:
+               - { label: Title, name: title }
+               - { label: id, name: id, widget: number }
+               - { label: Description, name: description }
+               - { label: Image, name: image, widget: image }
+       - label: Service Process
+         name: serviceProcess
+         widget: object
+         fields:
+           - { label: Title, name: title, required: false }
+           - label: Steps
+             name: steps
+             required: false
+             widget: list
+             fields:
+               - { label: Title, name: title }
+               - { label: id, name: id, widget: number }
+               - { label: Order, name: order }
+               - { label: Description, name: description }
+               - { label: ThemeColor, name: themeColor }
+       - label: FAQ
+         name: faq
+         widget: object
+         fields:
+           - { label: Title, name: title, required: false }
+           - label: Questions
+             name: questions
+             required: false
+             widget: list
+             fields:
+               - { label: id, name: id, widget: number }
+               - { label: Question, name: question }
+               - { label: Answer, name: answer }
+       - { label: Key, name: key }
+       - { label: Parent Type, name: parentType }
+       - label: SEO
+         name: seo
+         widget: object
+         fields:
+           - { name: title, label: Title }
+           - { name: description, label: Description }
+           - { name: keywords, label: Keywords, widget: list }
+     meta: { path: { widget: string, label: "Path", index_file: "index" } }
+   - name: blog
+     label: Resources
+     label_singular: "Blog"
+     folder: resources
+     media_folder: ""
+     public_folder: ""
+     slug: "{{slug}}"
+     create: true
+     nested:
+       depth: 100
+       summary: "{{title}}"
+     fields:
+       - label: Author Image
+         name: author_image
+         widget: image
+         media_folder: "/resources/"
+         default: "cc-logo-new.png"
+       - { name: author, label: Author, default: "ContentConcepts" }
+       - { name: bio, label: Bio }
+       - { name: title, label: Title }
+       - { name: date, label: Date, widget: date, default: "" }
+       - { name: previewImage, label: Preview Image, widget: image }
+       - { name: excerpt, label: Excerpt }
+       - { name: tags, label: Tags, widget: list }
+       - { name: body, label: Body, widget: markdown }
+       - label: SEO
+         name: seo
+         widget: object
+         fields:
+           - { name: title, label: Title }
+           - { name: description, label: Description }
+           - { name: keywords, label: Keywords, widget: list }
+   - name: pricing
+     label: Pricing
+     files:
+       - label: Pricing
+         name: pricing
+         file: "pricing/index.md"
+         fields:
+           - { name: title, label: Title }
+           - { name: heading, label: Heading }
+           - { name: subHeading, label: SubHeading }
+           - label: Types
+             name: types
+             widget: list
+             fields:
+               - { label: id, name: id, widget: number }
+               - { label: Title, name: title }
+               - label: Pricing
+                 name: pricing
+                 widget: list
+                 fields:
+                   - { label: id, name: id, widget: number }
+                   - { label: Title, name: title }
+                   - {
+                       label: Editing Services,
+                       name: editingServices,
+                       widget: list,
+                     }
+                   - label: Price
+                     name: price
+                     widget: object
+                     fields:
+                       - { label: inr, name: inr }
+                       - { label: usd, name: usd }
+                   - { label: Theme Color, name: themeColor }
+       - label: SEO
+         name: seoAbout
+         file: "pricing/seo.md"
+         fields:
+           - { label: Title, name: title }
+           - { label: Description, name: description }
+           - { label: Keywords, name: keywords, widget: list }
+   - label: FAQ
+     name: faq
+     files:
+       - label: FAQ
+         name: faq
+         file: "faq.md"
+         fields:
+           - { label: Title, name: title }
+           - label: Questions
+             name: questions
+             widget: list
+             fields:
+               - { label: id, name: id, widget: number }
+               - { label: Question, name: question }
+               - { label: Answer, name: answer }
+   - label: Quality Assurance
+     name: qualityAssurance
+     files:
+       - label: Quality Assurance
+         name: qualityAssurance
+         file: "qualityAssurance.md"
+         fields:
+           - { label: Title, name: title }
+           - { name: body, label: Body, widget: markdown }
+   - label: Quote Category
+     name: quoteCategory
+     files:
+       - label: Quote Category
+         name: quoteCategory
+         file: "quoteCategory.md"
+         fields:
+           - { label: Title, name: title }
+           - label: Categories
+             name: categories
+             widget: list
+             fields:
+               - { label: Label, name: label }
+               - { label: Value, name: value }
+   - label: SEO Contact Page
+     name: seoContact
+     files:
+       - label: SEO Contact
+         name: seoContact
+         file: "seoContact.md"
+         fields:
+           - { label: Title, name: title }
+           - { label: Description, name: description }
+           - { label: Keywords, name: keywords, widget: list }
+   - label: SEO Blog Page
+     name: seoBlog
+     files:
+       - label: SEO Blog
+         name: seoBlog
+         file: "seoBlog.md"
+         fields:
+           - { label: Title, name: title }
+           - { label: Description, name: description }
+           - { label: Keywords, name: keywords, widget: list }
+

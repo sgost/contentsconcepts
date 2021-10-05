@@ -57,15 +57,6 @@ export const query = graphql`
           tagContent
           content
         }
-        priceDescription {
-          title
-          descriptions {
-            description
-          }
-          lists {
-            list
-          }
-        }
         features {
           id
           title
@@ -77,6 +68,15 @@ export const query = graphql`
           levelTypes {
             title
             themeColor
+          }
+          priceDescription {
+            title
+            descriptions {
+              description
+            }
+            lists {
+              list
+            }
           }
           levels {
             id
