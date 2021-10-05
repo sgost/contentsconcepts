@@ -37,10 +37,8 @@ export const MenuContainer = styled.div`
     }
   }
   .ant-layout-sider {
-    width: 30% !important;
     margin: 0px 30px;
     flex: unset !important;
-    max-width: 30% !important;
     background: transparent !important;
     @media only screen and (min-width: 576px) and (max-width: 992px) {
       margin: 0px 10px;
@@ -544,39 +542,38 @@ export const FooterCol = styled(Col)`
 `
 
 //Level Description
-export const LevelDescription = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 5vw;
-  width: fit-content;
-  margin: auto;
-  h1 {
-    font-size: 28px;
-    line-height: 34px;
-    margin-bottom: 10px;
-    @media (max-width: 768px) {
-      font-size: 24px;
-    }
-  }
-  h3 {
-    margin-bottom: 24px;
-  }
-  .gatsby-resp-image-wrapper {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-  p {
-    margin-bottom: 24px;
-    font-size: 16px;
-  }
-  ul {
-    list-style: inside;
-    margin-bottom: 10px;
-  }
-  li {
-    font-weight: normal;
-    font-size: 16px;
-    color: ${palette.PRIMARY_TXT_COLOR};
-    margin: 15px 0px;
-  }
-`
+// export const LevelDescription = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   padding: 5vw;
+//   margin: auto;
+//   h1 {
+//     font-size: 28px;
+//     line-height: 34px;
+//     margin-bottom: 10px;
+//     @media (max-width: 768px) {
+//       font-size: 24px;
+//     }
+//   }
+//   h3 {
+//     margin-bottom: 24px;
+//   }
+//   .gatsby-resp-image-wrapper {
+//     margin-top: 40px;
+//     margin-bottom: 40px;
+//   }
+//   p {
+//     margin-bottom: 24px;
+//     font-size: 16px;
+//   }
+//   ul {
+//     list-style: inside;
+//     margin-bottom: 10px;
+//   }
+//   li {
+//     font-weight: normal;
+//     font-size: 16px;
+//     color: ${palette.PRIMARY_TXT_COLOR};
+//     margin: 10px 0px 15px 0;
+//   }
+// `

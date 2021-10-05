@@ -111,10 +111,12 @@ const EditingLevels = ({ content }) => {
                           {descriptions.description}
                         </p>
                       ))}
+                      <ul>
                     {priceDescription.lists &&
                       priceDescription.lists.map(lists => (
-                        <p key={lists.list}>{lists.list}</p>
+                        <li key={lists.list}>{lists.list}</li>
                       ))}
+                      </ul>
                   </Fragment>
                 ))}
             </Fragment>
