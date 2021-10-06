@@ -418,9 +418,9 @@
            - { name: description, label: Description }
            - { name: keywords, label: Keywords, widget: list }
      meta: { path: { widget: string, label: "Path", index_file: "index" } }
-   - name: blog
+   - name: resources
      label: Resources
-     label_singular: "Blog"
+     label_singular: "Resources"
      folder: resources
      media_folder: ""
      public_folder: ""
@@ -430,11 +430,6 @@
        depth: 100
        summary: "{{title}}"
      fields:
-       - label: Author Image
-         name: author_image
-         widget: image
-         media_folder: "/resources/"
-         default: "cc-logo-new.png"
        - { name: author, label: Author, default: "ContentConcepts" }
        - { name: bio, label: Bio }
        - { name: title, label: Title }
@@ -442,6 +437,7 @@
        - { name: previewImage, label: Preview Image, widget: image }
        - { name: excerpt, label: Excerpt }
        - { name: tags, label: Tags, widget: list }
+       - { name: Category, label: category, widget: string, default: "Academic Editing, Publication Support, Plagiarism Check, Business Editing" }
        - { name: body, label: Body, widget: markdown }
        - label: SEO
          name: seo

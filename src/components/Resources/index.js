@@ -7,10 +7,10 @@ import {
   BlogContent,
   TagsList
 } from './styles';
+import Img from "../../images/cc-logo-new.png"
 
 export const BlogPost = ({
   fields,
-  author_image,
   author,
   bio,
   date,
@@ -27,7 +27,7 @@ export const BlogPost = ({
       <BlogContainer>
         <AuthorInfo>
           <div className="author_image">
-            <img src={author_image} alt={author} />
+            <img src={Img} alt={author} />
           </div>
           <div className="author_info">
             <h4>{author}</h4>
@@ -74,12 +74,7 @@ const Blog = ({ data }) => {
 
   const seoData = post.frontmatter.seo;
 
-  let authorImage;
-  if(post.frontmatter.author_image.extension === 'svg' && post.frontmatter.author_image.childImageSharp === null) {
-    authorImage = post.frontmatter.author_image.publicURL;
-  } else {
-    authorImage = post.frontmatter.author_image.childImageSharp.fluid.src;
-  }
+    const authorImage = post.frontmatter.author_image.publicURL;
 
   return (
     <Fragment>

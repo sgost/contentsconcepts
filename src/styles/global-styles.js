@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components"
 // Abstracts
-import * as palette from './variables';
+import * as palette from "./variables"
 
 export const GlobalStyle = createGlobalStyle`
   @-ms-viewport {
@@ -413,6 +413,38 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  #blogListContainer_menu{
+    box-shadow:rgb(46 41 51 / 8%) 0px 1px 2px, rgb(71 63 79 / 8%) 0px 2px 4px;
+    width:fit-content;
+    margin:0 0 0 auto;
+    position:absolute;
+    right:0;
+    z-index:2;
+    padding:28px 0 28px 0;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px;
+    background:white;
+    overflow:hidden;
+    cursor:pointer;
+    #menu1{
+    font-size: 20px;
+    width:100%;
+    padding:16px 16px 16px 20px;
+    border-left:5px solid #1976D2;
+    color:#1976D2;
+    box-shadow: 10px 10px 10px rgba(71, 63, 79, 0.08);
+    background-color: ${palette.WHITE_COLOR};
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s, padding 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    }
+      #menu2{
+        font-size: 20px;
+        width:100%;
+        margin:16px 16px 16px 28px ;
+        transition:0.5s ease;
+        }
+  }
+
+
   .blogListContainer {
     max-width: 700px;
     margin: 48px auto;
@@ -470,7 +502,6 @@ export const GlobalStyle = createGlobalStyle`
       }
     }
   }
-
   .ant-modal-mask, .ant-modal-wrap {
     left: 0 !important;
   }
@@ -634,4 +665,4 @@ export const GlobalStyle = createGlobalStyle`
       align-items: center;
     }
   }
-`;
+`

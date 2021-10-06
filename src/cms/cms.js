@@ -83,7 +83,7 @@ CMS.registerPreviewTemplate("team", withStyledComponentsRendered(TeamPreview));
 
 CMS.registerPreviewTemplate("services", withStyledComponentsRendered(ServicePreview));
 
-CMS.registerPreviewTemplate("blog", withStyledComponentsRendered(BlogPreview));
+CMS.registerPreviewTemplate("resources", withStyledComponentsRendered(BlogPreview));
 
 CMS.registerPreviewTemplate("pricing", withStyledComponentsRendered(PricingPreview));
 
