@@ -117,7 +117,7 @@ height: 3.45323741007194vw;
 }
 #slider_input p{
   margin:0.5vw 0 0 1vw;
-  font-size:1.00719424460432vw;
+  font-size:0.9vw;
   line-height:1.72661870503597vw;
   @media (max-width:750px){
     font-size: 2.44897959183673vw;

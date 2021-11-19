@@ -32,7 +32,7 @@ export const BannerSection = styled.div`
         margin: 3vw 0 0 9.5vw;
       }
       #view_prize Button:hover {
-        width: 65vw;
+        width: 69vw;
       }
     }
     .mob-banner-illustration {

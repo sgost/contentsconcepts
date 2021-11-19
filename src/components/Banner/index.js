@@ -48,7 +48,7 @@ export const HomeBannerSection = ({
               services && services.map(dataItem =>
                 <li key={dataItem.id}>
                   <Button>
-                    <Link to={"/services/" + dataItem.link}>{dataItem.title}</Link>
+                    <Link to={dataItem.link}>{dataItem.title}</Link>
                   </Button>
                 </li>
               )
